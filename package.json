@@ -1,0 +1,21 @@
+{
+  "name": "freshdesk-agent-connector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only Freshdesk ticket connector exposed as MCP tools",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

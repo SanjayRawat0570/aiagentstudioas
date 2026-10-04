@@ -1,0 +1,21 @@
+{
+  "servers": {
+    "freshdesk-readonly": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/server.js"],
+      "env": {
+        "FRESHDESK_DOMAIN": "yourcompany.freshdesk.com",
+        "FRESHDESK_API_KEY": "${input:freshdeskApiKey}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "freshdeskApiKey",
+      "description": "Freshdesk API key",
+      "password": true
+    }
+  ]
+}
